@@ -1,0 +1,8 @@
+{
+    "pages": {
+        "home": "Home",
+        "characters": "Characters",
+        "locations": "Locations",
+        "nothingHere": "Nothing Here"
+    }
+}
