@@ -10,8 +10,6 @@ import {
 } from '@chakra-ui/react'
 import { MouseEventHandler } from 'react'
 
-// test commit
-
 export type MenuOptionType = {
   onClick: MouseEventHandler
   label: string
