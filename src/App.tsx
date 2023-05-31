@@ -1,17 +1,44 @@
 import React from 'react'
 import './App.css'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, useNavigate } from 'react-router-dom'
 import Home from './pages/Home'
-import Layout from './pages/Layout'
+import Navbar from './pages/Navbar'
 import Locations from './pages/Locations'
 import NotFound from './pages/NotFound'
 import Characters from './pages/Characters'
+import RouteType from './types/RouteType'
+import localization from './localization.json'
 
-function App() {
+const strings = localization.navbar.pages
+
+const App = () => {
+  const navigate = useNavigate()
+
+  const navBarRoutes: RouteType[] = [
+    {
+      label: strings.home,
+      onClick: () => {
+        navigate('/')
+      },
+    },
+    {
+      label: strings.characters,
+      onClick: () => {
+        navigate('/characters')
+      },
+    },
+    {
+      label: strings.locations,
+      onClick: () => {
+        navigate('/locations')
+      },
+    },
+  ]
+
   return (
     <div className='App'>
       <Routes>
-        <Route path='/' element={<Layout />}>
+        <Route path='/' element={<Navbar routes={navBarRoutes} />}>
           <Route index element={<Home />} />
           <Route path='characters' element={<Characters />} />
           <Route path='locations' element={<Locations />} />
