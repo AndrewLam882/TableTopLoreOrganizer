@@ -1,8 +1,8 @@
 import { Outlet } from 'react-router-dom'
 import { Box, Flex, HStack } from '@chakra-ui/react'
-import RouteType from '../types/RouteType'
-import NavButton from '../components/NavButton'
-import StyledMenu, { MenuOptionType } from '../components/StyledMenu'
+import RouteType from '../types/routeType'
+import NavButton from '../components/navButton'
+import StyledMenu, { MenuOptionType } from '../components/styledMenu'
 
 type NavBarPropsType = {
   routes: RouteType[]

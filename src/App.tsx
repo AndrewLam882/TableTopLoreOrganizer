@@ -1,12 +1,12 @@
 import React from 'react'
 import './App.css'
 import { Routes, Route, useNavigate } from 'react-router-dom'
-import Home from './pages/Home'
-import Navbar from './pages/Navbar'
-import Locations from './pages/Locations'
-import NotFound from './pages/NotFound'
-import Characters from './pages/Characters'
-import RouteType from './types/RouteType'
+import Home from './pages/home'
+import Navbar from './pages/navbar'
+import Locations from './pages/locations'
+import NotFound from './pages/notFound'
+import Characters from './pages/characters'
+import RouteType from './types/routeType'
 import localization from './localization.json'
 
 const strings = localization.navbar.pages
