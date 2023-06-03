@@ -1,0 +1,21 @@
+type ForgottenRealmsLanguages =
+  | 'Common'
+  | 'Dwarvish'
+  | 'Elvish'
+  | 'Giant'
+  | 'Gnomish'
+  | 'Goblin'
+  | 'Halfling'
+  | 'Orc'
+  | 'Abyssal'
+  | 'Celestial'
+  | 'Draconic'
+  | 'Infernal'
+  | 'Primordial'
+  | 'Sylvan'
+  | 'Undercommon'
+  | 'Deep Speech'
+  | 'Druidic'
+  | 'Thieves Cant'
+
+export default ForgottenRealmsLanguages
