@@ -1,0 +1,15 @@
+:root {
+  --dwarf-background: linear-gradient(to bottom right, #f5deb3, #c8a168, #664c20);
+  --duergar-background: linear-gradient(to bottom right, #757575, #424242, #191919);
+
+  --wood-elf-background: linear-gradient(to bottom right, #82b366, #477d4d, #144026);
+  --dark-elf-background: linear-gradient(to bottom right, #c751bd, #821d93, #470051);
+  --sun-elf-background: linear-gradient(to bottom right, #fad961, #f76b1c, #ad1e00);
+
+  --human-earth-background: linear-gradient(to bottom right, #c9a17c, #a57c59, #7e5837, #593415);
+  --human-sky-background: linear-gradient(to bottom right, #97c2e6, #6c99c4, #4773a4, #2c4d85);
+  --human-sun-background: linear-gradient(to bottom right, #ffed00, #d4b62e, #aa8c5b, #81632a);
+  --human-background: linear-gradient(to bottom right, #ff5740, #c43526, #5a849c, #09407e);
+
+  --other-background: linear-gradient(to bottom right, #fff, #8c6a36, #000);
+}
