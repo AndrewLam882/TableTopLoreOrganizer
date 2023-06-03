@@ -4,20 +4,7 @@ import localization from '../localization.json'
 import AlertPopup from '../components/alertPopup'
 import CardRow from '../components/cards/cardRow'
 import CharacterInfo from '../types/characterInfo'
-
-const dummyCharacters: CharacterInfo[] = [
-  { name: 'Joe1' },
-  { name: 'Jim2' },
-  { name: 'Bob3' },
-  { name: 'Joe4' },
-  { name: 'Jim5' },
-  { name: 'Bob6' },
-  { name: 'Bob7' },
-  { name: 'Bob8' },
-  { name: 'Bob9' },
-  { name: 'Bob10' },
-  { name: 'Bob11' },
-]
+import dummyCharacters from './dummyCharacters'
 
 function Characters() {
   const strings = localization.characters
@@ -53,11 +40,11 @@ function Characters() {
       <HStack p='0 32px' w='full' alignItems='top' justifyContent={'center'}>
         <VStack w='60%'>
           <Input type='text' placeholder={strings.placeholder} onChange={handleSearchBarChange} />
-          {isEmpty ? <AlertPopup title={strings.error} /> : <Box height='60px'></Box>}
+          {isEmpty ? <AlertPopup title={strings.error} /> : <Box height='3rem'></Box>}
         </VStack>
       </HStack>
 
-      <CardRow cards={searchHits} variant='search'></CardRow>
+      <CardRow cards={searchHits as CharacterInfo[]} variant='search'></CardRow>
     </VStack>
   )
 }
