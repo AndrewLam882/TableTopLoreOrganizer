@@ -1,5 +1,5 @@
 import { VStack, Input, HStack, Text, Box } from '@chakra-ui/react'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import localization from '../localization.json'
 import AlertPopup from '../components/alertPopup'
 import CardRow from '../components/cards/cardRow'
@@ -11,7 +11,6 @@ function Characters() {
 
   const [characters, setCharacters] = useState<CharacterInfo[]>([])
   const [name, setName] = useState('')
-  const [searchHits, setSearchHits] = useState<CharacterInfo[]>([])
   const [isEmpty, setIsEmpty] = useState(false)
 
   useEffect(() => {
@@ -19,9 +18,10 @@ function Characters() {
     setCharacters(dummyCharacters)
   }, [])
 
-  useEffect(() => {
-    setSearchHits(characters.filter((character) => character.name.toLowerCase().includes(name)))
-  }, [name, characters])
+  const searchHits = useMemo(
+    () => characters.filter((character) => character.name.toLowerCase().includes(name)),
+    [name, characters],
+  )
 
   const handleSearchBarChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (event.target.value.length === 0) setIsEmpty(true)
