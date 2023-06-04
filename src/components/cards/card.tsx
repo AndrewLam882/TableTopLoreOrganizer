@@ -8,7 +8,7 @@ import {
   Collapse,
 } from '@chakra-ui/react'
 import './styles.css'
-import './../../theme/gradients.css'
+import '../../theme/gradients.css'
 import LocationInfo from '../../types/locationInfo'
 import CharacterInfo from '../../types/characterInfo'
 import CharacterCardBody from './characterCardBody'
@@ -46,7 +46,7 @@ const Card = ({ info, variant = 'pinned', ...rest }: CardProps) => {
     >
       <Collapse in={isOpen || isPinned} animateOpacity>
         <CardHeader className={`${variant}-card-header`}>
-          <Text fontSize={'xx-small'}>{'Modified date'}</Text>
+          <Text fontSize='xx-small'>Modified date</Text>
           <Text>{info.name}</Text>
         </CardHeader>
         <CardBody className={`${variant}-card-body`} flex={0.5}>

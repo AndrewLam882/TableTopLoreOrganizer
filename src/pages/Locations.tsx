@@ -1,4 +1,4 @@
-function Locations() {
+const Locations = () => {
   return (
     <div>
       <h2>Locations</h2>

@@ -64,15 +64,15 @@ const StyledMenu = ({
             {!openLabel || !isOpen ? label : openLabel}
           </MenuButton>
           <MenuList w='23rem' {...listProps}>
-            {options.map(({ onClick, label, command, leftIcon }: MenuOptionType) => (
+            {options.map(({ onClick, label: buttonLabel, command, leftIcon }: MenuOptionType) => (
               <MenuItem
-                key={`menuitem-${label}-option`}
+                key={`menuitem-${buttonLabel}-option`}
                 onClick={onClick}
                 icon={leftIcon}
                 command={command}
                 {...itemProps}
               >
-                {label}
+                {buttonLabel}
               </MenuItem>
             ))}
           </MenuList>

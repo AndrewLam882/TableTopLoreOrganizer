@@ -8,7 +8,7 @@ interface NavButtonProps extends ButtonProps {
 
 const NavButton = ({ onClick, label, ...rest }: NavButtonProps) => {
   return (
-    <Button onClick={onClick} variant={'navbutton'} size={'md'} {...rest}>
+    <Button onClick={onClick} variant='navbutton' size='md' {...rest}>
       {label}
     </Button>
   )

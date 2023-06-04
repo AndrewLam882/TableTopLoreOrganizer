@@ -1,5 +1,4 @@
 import { Divider, Text } from '@chakra-ui/react'
-import React from 'react'
 
 interface CharacterCardBodyProps {
   race?: string
@@ -9,21 +8,21 @@ interface CharacterCardBodyProps {
 
 const CharacterCardBody = ({ race, currentLocation, backstory }: CharacterCardBodyProps) => {
   return (
-    <React.Fragment>
+    <>
       {race && (
         <>
           <Text>{`Race: ${race || 'Unknown'}`}</Text>
-          <Divider></Divider>
+          <Divider />
         </>
       )}
       {currentLocation && <Text>{`Location: ${currentLocation}`}</Text>}
       {backstory && (
         <>
-          <Text textDecoration={'underline'}>{'Description'}</Text>
+          <Text textDecoration='underline'>Description</Text>
           <Text>{backstory}</Text>
         </>
       )}
-    </React.Fragment>
+    </>
   )
 }
 

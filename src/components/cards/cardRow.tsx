@@ -12,7 +12,7 @@ const CardRow = ({ cards, variant = 'pinned' }: CardRowProps) => {
   return (
     <Flex className={`${variant}-card-list`}>
       {cards.map((info: CardInfo) => (
-        <Card key={info.name} info={info} variant={variant}></Card>
+        <Card key={info.name} info={info} variant={variant} />
       ))}
     </Flex>
   )

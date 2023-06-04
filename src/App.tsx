@@ -7,11 +7,11 @@ import Locations from './pages/locations'
 import NotFound from './pages/notFound'
 import Characters from './pages/characters'
 import RouteType from './types/routeType'
-import localization from './localization.json'
+import localization from './localization'
 
 const strings = localization.navbar.pages
 
-const App = () => {
+function App() {
   const navigate = useNavigate()
 
   const navBarRoutes: RouteType[] = [

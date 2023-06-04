@@ -1,3 +1,4 @@
+/* eslint-disable no-alert */
 import { Outlet } from 'react-router-dom'
 import { Box, Flex, HStack } from '@chakra-ui/react'
 import RouteType from '../types/routeType'
@@ -30,13 +31,13 @@ const NavBar = ({ routes }: NavBarPropsType) => {
   return (
     <Box w='100%' mt='16px' data-testid='nav-bar'>
       <Box mb='24px'>
-        <Flex justifyContent={'space-between'} p='16px 32px' borderBottom='1px solid white'>
+        <Flex justifyContent='space-between' p='16px 32px' borderBottom='1px solid white'>
           <NavButton
-            key={'navbar-home-button'}
+            key='navbar-home-button'
             onClick={routes[0].onClick}
             leftIcon={routes[0].icon}
             label={routes[0].label}
-          ></NavButton>
+          />
 
           <HStack>
             {routes.slice(1).map(({ onClick, label, icon }: RouteType) => (
@@ -45,7 +46,7 @@ const NavBar = ({ routes }: NavBarPropsType) => {
                 onClick={onClick}
                 leftIcon={icon}
                 label={label}
-              ></NavButton>
+              />
             ))}
 
             <StyledMenu
@@ -53,12 +54,12 @@ const NavBar = ({ routes }: NavBarPropsType) => {
               openLabel='Select A Type'
               options={ioOptions}
               buttonProps={{ w: '12rem' }}
-            ></StyledMenu>
+            />
             <StyledMenu
               label='Import/Export Data'
               options={createOptions}
               buttonProps={{ w: '14rem' }}
-            ></StyledMenu>
+            />
           </HStack>
         </Flex>
       </Box>

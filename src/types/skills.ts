@@ -22,6 +22,7 @@ type Skills =
 
 export default Skills
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 function mapSkillToStat(skill: Skills): Stat | undefined {
   switch (skill) {
     case 'Acrobatics':

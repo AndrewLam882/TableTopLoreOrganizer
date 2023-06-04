@@ -21,6 +21,8 @@ const Gandor: CharacterInfo = {
     ['Spellbook', 1],
     ['Robe', 1],
   ],
+  currentLocation: 'test location',
+  backstory: 'backstory',
 }
 
 const Elysia: CharacterInfo = {
@@ -70,11 +72,6 @@ const Alistair: CharacterInfo = {
   ],
 }
 
-const dummyCharacters: CharacterInfo[] = [
-  { name: 'Orobrim', race: 'Human' },
-  Gandor,
-  Elysia,
-  Alistair,
-]
+const dummyCharacters: CharacterInfo[] = [Gandor, Elysia, Alistair]
 
 export default dummyCharacters

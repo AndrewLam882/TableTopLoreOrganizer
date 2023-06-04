@@ -1,6 +1,6 @@
 import { VStack, Input, HStack, Text, Box } from '@chakra-ui/react'
 import React, { useEffect, useMemo, useState } from 'react'
-import localization from '../localization.json'
+import localization from '../localization'
 import AlertPopup from '../components/alertPopup'
 import CardRow from '../components/cards/cardRow'
 import CharacterInfo from '../types/characterInfo'
@@ -35,16 +35,16 @@ function Characters() {
     <VStack spacing='16px'>
       <Text>Characters</Text>
 
-      <CardRow cards={dummyCharacters}></CardRow>
+      <CardRow cards={dummyCharacters} />
 
-      <HStack p='0 32px' w='full' alignItems='top' justifyContent={'center'}>
+      <HStack p='0 32px' w='full' alignItems='top' justifyContent='center'>
         <VStack w='60%'>
           <Input type='text' placeholder={strings.placeholder} onChange={handleSearchBarChange} />
-          {isEmpty ? <AlertPopup title={strings.error} /> : <Box height='3rem'></Box>}
+          {isEmpty ? <AlertPopup title={strings.error} /> : <Box height='3rem' />}
         </VStack>
       </HStack>
 
-      <CardRow cards={searchHits as CharacterInfo[]} variant='search'></CardRow>
+      <CardRow cards={searchHits as CharacterInfo[]} variant='search' />
     </VStack>
   )
 }
