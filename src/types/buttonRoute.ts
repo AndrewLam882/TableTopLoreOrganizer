@@ -1,9 +1,9 @@
 import { MouseEventHandler } from 'react'
 
-type Route = {
+type ButtonRoute = {
   onClick: MouseEventHandler
   label?: string | undefined
   icon?: JSX.Element
 }
 
-export default Route
+export default ButtonRoute

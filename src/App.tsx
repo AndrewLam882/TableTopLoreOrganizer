@@ -9,15 +9,15 @@ import Navbar from './components/navigation/navbar'
 import Locations from './pages/locations'
 import NotFound from './pages/notFound'
 import Characters from './pages/characters'
-import RouteType from './types/routeType'
 import localization from './localization'
+import ButtonRoute from './types/buttonRoute'
 
 const strings = localization.navbar.pages
 
 function App() {
   const navigate = useNavigate()
 
-  const navBarRoutes: RouteType[] = [
+  const navBarRoutes: ButtonRoute[] = [
     {
       label: strings.home,
       onClick: () => {

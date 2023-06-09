@@ -1,6 +1,6 @@
 import { Box, Stack, VStack, useDisclosure } from '@chakra-ui/react'
 import { BiImport, BiExport } from 'react-icons/bi'
-import Route from '../../types/route'
+import ButtonRoute from '../../types/buttonRoute'
 import NavButton from '../navButton'
 import AddContentNav from './addContentNav'
 
@@ -10,7 +10,7 @@ import JsonImportModal from '../modals/jsonImportModal'
 const strings = LocalizedStrings.navbar
 
 type NavBarPropsType = {
-  routes: Route[]
+  routes: ButtonRoute[]
 }
 
 const NavBar = ({ routes }: NavBarPropsType) => {
@@ -20,7 +20,7 @@ const NavBar = ({ routes }: NavBarPropsType) => {
     <Box h='100%' w='11rem' className='navbar' background='gray.800'>
       <Stack h='100%' p='32px 16px' justifyContent='space-between'>
         <VStack spacing='32px'>
-          {routes.map(({ onClick, label, icon }: Route) => (
+          {routes.map(({ onClick, label, icon }: ButtonRoute) => (
             <NavButton
               key={`navbar-${label}-button`}
               onClick={onClick}
