@@ -8,17 +8,9 @@ interface NavButtonProps extends ButtonProps {
 
 const NavButton = ({ onClick, label, ...rest }: NavButtonProps) => {
   return (
-    <Button
-      onClick={onClick}
-      variant='navbutton'
-      size='md'
-      textAlign='right'
-      w='8rem'
-      iconSpacing={3}
-      {...rest}
-    >
+    <Button onClick={onClick} w='full' iconSpacing={3} {...rest} background='none'>
       <HStack w='100%' justifyContent='space-between'>
-        <Text className='button-text'>{label}</Text>
+        <Text>{label}</Text>
       </HStack>
     </Button>
   )

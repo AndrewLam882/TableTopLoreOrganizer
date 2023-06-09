@@ -26,21 +26,6 @@ interface StyledMenuProps {
   itemProps?: MenuItemProps
 }
 
-const defaultMenuButtonStyle = {
-  bg: 'blue.800',
-  boxShadow: '0 0 2px 2px',
-  _hover: {
-    bg: 'blue.200',
-    color: 'black',
-    fontWeight: 'bold',
-  },
-  _active: {
-    bg: 'blue.200',
-    color: 'black',
-    fontWeight: 'bold',
-  },
-}
-
 const StyledMenu = ({
   label,
   openLabel,
@@ -58,7 +43,6 @@ const StyledMenu = ({
             as={Button}
             rightIcon={isOpen ? <ChevronDownIcon /> : <ChevronLeftIcon />}
             leftIcon={<AddIcon />}
-            {...defaultMenuButtonStyle}
             {...buttonProps}
           >
             {!openLabel || !isOpen ? label : openLabel}
