@@ -2,10 +2,18 @@ const LocalizedStrings = {
   navbar: {
     pages: {
       home: 'Home',
+      search: 'Search',
       characters: 'Characters',
       locations: 'Locations',
       nothingHere: 'Nothing Here',
     },
+    add: {
+      title: 'Content',
+      character: 'Character',
+      location: 'Location',
+    },
+    import: 'Import',
+    export: 'Export',
   },
   common: {
     submit: 'Submit',
