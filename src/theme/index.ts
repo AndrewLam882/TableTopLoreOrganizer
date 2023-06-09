@@ -23,6 +23,4 @@ const theme = {
   },
 }
 
-// const config = { components: { Button, Menu } }
-
 export default extendTheme(theme)
