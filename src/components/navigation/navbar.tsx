@@ -1,10 +1,11 @@
-import { Box, Stack, VStack } from '@chakra-ui/react'
+import { Box, Stack, VStack, useDisclosure } from '@chakra-ui/react'
 import { BiImport, BiExport } from 'react-icons/bi'
 import RouteType from '../../types/routeType'
 import NavButton from '../navButton'
 import AddContentNav from './addContentNav'
 
 import LocalizedStrings from '../../localization'
+import JsonImportModal from '../modals/jsonImportModal'
 
 const strings = LocalizedStrings.navbar
 
@@ -13,6 +14,8 @@ type NavBarPropsType = {
 }
 
 const NavBar = ({ routes }: NavBarPropsType) => {
+  const { isOpen: isImportOpen, onOpen: onImportOpen, onClose: onImportClose } = useDisclosure()
+
   return (
     <Box h='100%' w='11rem' className='navbar' background='gray.800'>
       <Stack h='100%' p='32px 16px' justifyContent='space-between'>
@@ -30,10 +33,12 @@ const NavBar = ({ routes }: NavBarPropsType) => {
         </VStack>
 
         <VStack p='32px 0' borderTop='1px solid white' spacing='32px'>
-          <NavButton label={strings.import} leftIcon={<BiImport />} />
+          <NavButton label={strings.import} leftIcon={<BiImport />} onClick={onImportOpen} />
           <NavButton label={strings.export} leftIcon={<BiExport />} />
         </VStack>
       </Stack>
+
+      <JsonImportModal isOpen={isImportOpen} onClose={onImportClose} />
     </Box>
   )
 }
