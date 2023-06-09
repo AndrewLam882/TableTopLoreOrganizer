@@ -1,9 +1,10 @@
 /* eslint-disable no-alert */
 import { Outlet } from 'react-router-dom'
-import { Box, Flex, HStack } from '@chakra-ui/react'
+import { Box, Flex, HStack, useDisclosure } from '@chakra-ui/react'
 import RouteType from '../types/routeType'
 import NavButton from '../components/navButton'
 import StyledMenu, { MenuOptionType } from '../components/styledMenu'
+import JsonImportModal from '../components/modals/jsonImportModal'
 
 type NavBarPropsType = {
   routes: RouteType[]
@@ -22,12 +23,19 @@ const createOptions: MenuOptionType[] = [
   },
 ]
 
-const ioOptions: MenuOptionType[] = [
-  { onClick: () => alert('Test Export'), label: 'Export Data' },
-  { onClick: () => alert('Test Import'), label: 'Import Data' },
-]
-
 const NavBar = ({ routes }: NavBarPropsType) => {
+  const { isOpen: isImportOpen, onOpen: onImportOpen, onClose: onImportClose } = useDisclosure()
+
+  const ioOptions: MenuOptionType[] = [
+    { onClick: onImportOpen, label: 'Import Data' },
+    {
+      onClick: () => {
+        // TODO Do Export here
+      },
+      label: 'Export Data',
+    },
+  ]
+
   return (
     <Box w='100%' mt='16px' data-testid='nav-bar'>
       <Box mb='24px'>
@@ -64,6 +72,7 @@ const NavBar = ({ routes }: NavBarPropsType) => {
         </Flex>
       </Box>
 
+      <JsonImportModal isOpen={isImportOpen} onClose={onImportClose} />
       <Outlet />
     </Box>
   )
