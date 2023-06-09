@@ -18,7 +18,7 @@ const strings = LocalizedStrings.navbar
 
 const AddContentNav = () => {
   return (
-    <Accordion allowMultiple allowToggle>
+    <Accordion allowToggle>
       <AccordionItem border='none'>
         <AccordionButton>
           <HStack>
