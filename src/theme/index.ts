@@ -1,10 +1,26 @@
+/* eslint-disable quotes */
 import { extendTheme } from '@chakra-ui/react'
-import Button from './components/button'
-import Menu from './components/menu'
-import styles from './styles'
 
-const config = { components: { Button, Menu } }
+const theme = {
+  config: {
+    initialColorMode: 'dark',
+    useSystemColorMode: true,
+  },
+  styles: {
+    global: {
+      body: {
+        margin: 0,
+        fontFamily:
+          "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif",
+        WebkitFontSmoothing: 'antialiased',
+        MozOsxFontSmoothing: 'grayscale',
+      },
 
-const index = extendTheme(config, styles)
+      code: {
+        fontFamily: "source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace",
+      },
+    },
+  },
+}
 
-export default index
+export default extendTheme(theme)

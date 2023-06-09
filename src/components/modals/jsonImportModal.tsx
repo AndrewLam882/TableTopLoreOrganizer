@@ -52,9 +52,9 @@ const JsonImportModal = ({ isOpen, onClose }: JsonImportModalProps) => {
     <Modal isOpen={isOpen} onClose={onClose}>
       <ModalOverlay />
       <ModalContent alignSelf='center'>
-        <ModalHeader color='black'>{strings.title}</ModalHeader>
-        <ModalCloseButton color='black' />
-        <ModalBody color='black'>
+        <ModalHeader>{strings.title}</ModalHeader>
+        <ModalCloseButton />
+        <ModalBody>
           <VStack spacing='16px' alignItems='start'>
             <Alert status='warning'>
               <AlertIcon />

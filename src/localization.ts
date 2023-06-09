@@ -12,8 +12,8 @@ const LocalizedStrings = {
       character: 'Character',
       location: 'Location',
     },
-    import: 'Import',
-    export: 'Export',
+    import: 'Import JSON',
+    export: 'Export JSON',
   },
   common: {
     submit: 'Submit',
