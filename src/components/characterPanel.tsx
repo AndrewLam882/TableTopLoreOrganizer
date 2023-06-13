@@ -33,7 +33,6 @@ const CharacterPanel = ({ character, ...rest }: CharacterPanelProps) => {
 
   const onSubmit = () => {}
 
-  console.log(watch())
   return (
     <Box
       minW='49%'
@@ -46,7 +45,12 @@ const CharacterPanel = ({ character, ...rest }: CharacterPanelProps) => {
       {...rest}
     >
       <form onSubmit={handleSubmit(onSubmit)}>
-        <VStack padding='16px' w='full' bgColor='rgba(0,0,0,0.5)' position='relative'>
+        <VStack
+          padding='16px 16px 16px 4rem'
+          w='full'
+          bgColor='rgba(0,0,0,0.5)'
+          position='relative'
+        >
           <StatBar register={register} getValues={getValues} setValue={setValue} />
           <VStack className='character-general-info'>
             <HStack w='full'>

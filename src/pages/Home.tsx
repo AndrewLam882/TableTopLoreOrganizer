@@ -8,9 +8,9 @@ const Home = () => {
   const displayList = [...dummyCharacters]
 
   return (
-    <VStack w='full' h='full' p='16px' overflow='hidden'>
+    <VStack w='full' h='full' p='16px'>
       <Text>Home</Text>
-      <HStack boxSize='full' overflowX='scroll' spacing='1%'>
+      <HStack boxSize='full' overflowX='scroll' spacing='4rem' p='0 3.5rem'>
         {displayList.map((info: LocationInfo | CharacterInfo) => {
           const isLocation = 'history' in info
           if (!isLocation)
