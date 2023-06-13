@@ -6,6 +6,7 @@ import Skills from './skills'
 import Stat from './stat'
 
 type CharacterInfo = {
+  id: number
   name: string
 
   age?: number
