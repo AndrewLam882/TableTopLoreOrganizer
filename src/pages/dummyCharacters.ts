@@ -16,11 +16,7 @@ const Gandor: CharacterInfo = {
   armorClass: 15,
   skills: ['Arcana', 'History'],
   savingThrows: ['Intelligence', 'Wisdom'],
-  equipment: [
-    ['Staff', 1],
-    ['Spellbook', 1],
-    ['Robe', 1],
-  ],
+  equipment: [],
   currentLocation: 'test location',
   backstory: 'backstory',
 }
@@ -42,10 +38,9 @@ const Elysia: CharacterInfo = {
   skills: ['Stealth', 'Perception', 'Acrobatics'],
   savingThrows: ['Dexterity', 'Intelligence'],
   equipment: [
-    ['Rapier', 1],
-    ['Leather Armor', 1],
-    // eslint-disable-next-line quotes
-    ["Thieves' Tools", 1],
+    { name: 'Rapier', amount: 1 },
+    { name: 'Leather Armour', amount: 1 },
+    { name: 'Thieves Tools', amount: 1 },
   ],
 }
 
@@ -66,9 +61,9 @@ const Alistair: CharacterInfo = {
   skills: ['Athletics', 'Survival', 'Intimidation'],
   savingThrows: ['Strength', 'Constitution'],
   equipment: [
-    ['Greatsword', 1],
-    ['Plate Armor', 1],
-    ['Shield', 1],
+    { name: 'Rapier', amount: 1 },
+    { name: 'Plate Armor', amount: 1 },
+    { name: 'Shield', amount: 1 },
   ],
 }
 

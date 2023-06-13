@@ -1,5 +1,7 @@
 import { HealthDice } from './dice'
+import Item from './item'
 import ForgottenRealmsLanguages from './languages'
+import RechargableAbility from './rechargableAbility'
 import Skills from './skills'
 import Stat from './stat'
 
@@ -50,10 +52,13 @@ type CharacterInfo = {
   spellcastingAbility?: Stat
   spellSaveDC?: number
   spellAttackBonus?: number
-  spells?: string[]
+  spells?: [string[]]
+  preparedSpells?: [string[]]
+  spellSlots?: number[]
+  rechargableAbilities?: RechargableAbility[]
 
   money?: number
-  equipment?: [string, number][]
+  equipment?: Item[]
 
   personality?: string
   ideals?: string
