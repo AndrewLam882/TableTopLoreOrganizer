@@ -1,12 +1,12 @@
 import { ChevronLeftIcon, ChevronRightIcon } from '@chakra-ui/icons'
 import { Input, VStack, Text, InputGroup, InputProps, Button } from '@chakra-ui/react'
-import { UseFormRegister, FieldValues, UseFormGetValues, UseFormSetValue } from 'react-hook-form'
+import { UseFormRegister, FieldValues, UseFormSetValue, UseFormWatch } from 'react-hook-form'
 
 interface StatInputProps extends InputProps {
   label: string
   register: UseFormRegister<FieldValues>
   setValue: UseFormSetValue<FieldValues>
-  getValues: UseFormGetValues<FieldValues>
+  watch: UseFormWatch<FieldValues>
   name?: string
   step?: number
   max?: number
@@ -21,7 +21,7 @@ const StatInput = ({
   label,
   register,
   setValue,
-  getValues,
+  watch,
   name,
   step = 1,
   max,
@@ -30,21 +30,21 @@ const StatInput = ({
 }: StatInputProps) => {
   const registeredName = label.replace(/\s+/g, '')[0].toLowerCase().concat(label.slice(1))
 
-  const modifier = skillToModifier(getValues(registeredName))
+  const modifier = skillToModifier(watch(registeredName))
 
   const onClick = () => {
     // TODO Roll a dice and apply modifier
   }
 
   const increment = () => {
-    const originalValue = parseInt(getValues(registeredName), 10)
+    const originalValue = parseInt(watch(registeredName), 10)
     const newValue = originalValue + step
 
     setValue(registeredName, max !== undefined && newValue > max ? max : newValue)
   }
 
   const decrement = () => {
-    const originalValue = parseInt(getValues(registeredName), 10)
+    const originalValue = parseInt(watch(registeredName), 10)
     const newValue = originalValue - step
 
     setValue(registeredName, min !== undefined && newValue < min ? min : newValue)
