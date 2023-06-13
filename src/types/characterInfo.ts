@@ -7,7 +7,7 @@ import Stat from './stat'
 
 type CharacterInfo = {
   id: number
-  name: string
+  name?: string
 
   age?: number
   height?: number

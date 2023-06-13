@@ -21,7 +21,7 @@ interface CardProps {
 
 const Card = ({ info, variant = 'pinned', ...rest }: CardProps) => {
   const imagePath = 'assets/character_portraits'
-  const image = `${imagePath}/${info.name.replace(/\s+/g, '-').toLowerCase()}.png`
+  const image = `${imagePath}/${info.name?.replace(/\s+/g, '-').toLowerCase()}.png`
 
   const fallbackBg = `${imagePath}/noImage.png`
   const bgGradient = info.race

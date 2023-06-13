@@ -19,7 +19,7 @@ function Characters() {
   }, [])
 
   const searchHits = useMemo(
-    () => characters.filter((character) => character.name.toLowerCase().includes(name)),
+    () => characters.filter((character) => character.name?.toLowerCase().includes(name)),
     [name, characters],
   )
 
