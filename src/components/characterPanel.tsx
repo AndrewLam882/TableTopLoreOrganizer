@@ -35,7 +35,7 @@ const CharacterPanel = ({ character, ...rest }: CharacterPanelProps) => {
 
   return (
     <Box
-      minW='49%'
+      minW='47%'
       h='90%'
       fontSize='0.75rem'
       bg={bgGradient}
@@ -51,7 +51,7 @@ const CharacterPanel = ({ character, ...rest }: CharacterPanelProps) => {
           bgColor='rgba(0,0,0,0.5)'
           position='relative'
         >
-          <StatBar register={register} getValues={getValues} setValue={setValue} />
+          <StatBar register={register} watch={watch} setValue={setValue} />
           <VStack className='character-general-info'>
             <HStack w='full'>
               <StringInput label='Name' register={register} />

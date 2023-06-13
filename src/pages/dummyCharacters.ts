@@ -1,7 +1,7 @@
 import CharacterInfo from '../types/characterInfo'
 
 const Gandor: CharacterInfo = {
-  id: 1,
+  id: 0,
   name: 'Gandor',
   age: 32,
   race: 'Human',
@@ -23,7 +23,7 @@ const Gandor: CharacterInfo = {
 }
 
 const Elysia: CharacterInfo = {
-  id: 2,
+  id: 1,
   name: 'Elysia',
   age: 24,
   race: 'Wood Elf',
@@ -47,7 +47,7 @@ const Elysia: CharacterInfo = {
 }
 
 const Alistair: CharacterInfo = {
-  id: 3,
+  id: 2,
   name: 'Alistair',
   age: 42,
   race: 'Dwarf',
