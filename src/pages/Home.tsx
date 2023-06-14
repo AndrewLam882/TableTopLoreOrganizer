@@ -17,8 +17,6 @@ const Home = () => {
     dispatch({ type: ADD_CHARACTER, payload: character })
   }
 
-  // test commit
-
   const deleteCharacter = (id: number) => {
     dispatch({ type: DELETE_CHARACTER, payload: id })
   }
